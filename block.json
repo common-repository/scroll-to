@@ -1,0 +1,46 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/scroll-to",
+  "version": "1.0.1",
+  "title": "Scroll To",
+  "category": "widgets",
+  "description": "Block element of scroll to top or a specific HTML element.",
+  "example": {},
+  "attributes": {
+    "scrollTo": {
+      "type": "string",
+      "enum": [
+        "top",
+        "element"
+      ],
+      "default": "top"
+    },
+    "elementSelector": {
+      "type": "string",
+      "default": ""
+    },
+    "behavior": {
+      "type": "string",
+      "enum": [
+        "smooth",
+        "instant"
+      ],
+      "default": "smooth"
+    },
+    "threshold": {
+      "type": "number",
+      "default": 35
+    }
+  },
+  "supports": {
+    "color": {},
+    "html": false,
+    "multiple": false
+  },
+  "textdomain": "scroll-to",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js"
+}
